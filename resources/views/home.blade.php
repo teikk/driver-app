@@ -1,23 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-                
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<section class="section">
+  <div class="container">
+    <div class="column is-half is-offset-3">
+      <h1 class="title">Welcome to Drive App</h1>
+      <h2 class="subtitle"></h2>Please login to start your journey</h2>
+      @include('_includes.login-form')
     </div>
-</div>
+  </div>
+</section>
 @endsection
